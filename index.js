@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const uuid = require('uuid/v3');
 const app = express();
+const port = process.env.PORT || 3000;
 
 app.use(morgan('tiny'));
 app.use(cors());
@@ -81,6 +82,6 @@ app.delete('/:username/data/:id', (req, res) => {
   res.status(204).send();
 })
 
-app.listen(8000, function(){
+app.listen(port, function(){
   console.log('Server is running');
 })
