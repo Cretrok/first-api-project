@@ -37,7 +37,7 @@ app.post('/:username/data', (req, res) => {
   if(!req.body.data){
     return res.status(401).send(`Para crear un item debes enviar un parámetro data en el body`);
   }
-  const newItem = {id: uuid(`http://first-api-project/${req.params.username}`, uuid.URL), data: req.body.data};
+  const newItem = {id: uuid(`https://api-xblocnotas.ml/${req.params.username}`, uuid.URL), data: req.body.data};
   users[req.params.username].push(newItem);
   res.status(201).json(newItem);
 })
