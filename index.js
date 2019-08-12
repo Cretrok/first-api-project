@@ -2,8 +2,8 @@ const morgan = require('morgan');
 const express = require('express');
 const cors = require('cors');
 const uuid = require('uuid/v3');
-const app = express();
 const port = process.env.PORT || 3000;
+const app = express();
 
 app.use(morgan('tiny'));
 app.use(cors());
