@@ -11,6 +11,10 @@ app.use(express.json());
 
 const users = {};
 
+app.get('/', (req, res) => {
+  res.send("api-notas");
+});
+
 app.get('/:username/data', (req, res) => {
   if(!users[req.params.username]){
     users[req.params.username] = [];
